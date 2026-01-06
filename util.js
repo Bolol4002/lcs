@@ -5,8 +5,8 @@ const houseRobber = (nums) => {
     if (n === 0) return 0;
     if (n === 1) return nums[0];
 
-    let prev2 = 0;        // dp[i-2]
-    let prev1 = nums[0]; // dp[i-1]
+    let prev2 = 0;       
+    let prev1 = nums[0]; 
 
     for (let i = 1; i < n; i++) {
         const pick = nums[i] + prev2;
@@ -16,7 +16,6 @@ const houseRobber = (nums) => {
         prev2 = prev1;
         prev1 = curr;
     }
-
     return prev1;
 };
 
