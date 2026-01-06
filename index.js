@@ -1,14 +1,14 @@
-import express from 'express'
-import {tile_end_point} from "./util.js"
+import express from 'express';
+import { house_robber_endpoint } from './util.js';
 
-
-const app = express()
+const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World')
-})
-app.get('/add/:a/:b', tile_end_point)
+    res.send('DP Solver API');
+});
+
+app.get('/rob', house_robber_endpoint);
 
 app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000')
-})
+    console.log('Server running on http://localhost:3000');
+});
